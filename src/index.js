@@ -16,9 +16,10 @@ class NoSleep {
 
       this.noSleepVideo.setAttribute('playsinline', '')
       this.noSleepVideo.setAttribute('src', mediaFile)
+      this.noSleepVideo.setAttribute('muted', true)
 
       this.noSleepVideo.addEventListener('timeupdate', function (e) {
-        if (this.noSleepVideo.currentTime > 0.5) {
+        if (this.noSleepVideo.currentTime > 1.5) {
           this.noSleepVideo.currentTime = Math.random()
         }
       }.bind(this))
